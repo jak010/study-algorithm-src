@@ -1,4 +1,5 @@
 // 선택 정렬은 하나씩
+// 선택 정렬의 시간 복잡도는 n^2
 
 #include <stdio.h>
 
@@ -21,6 +22,7 @@ int main(int argc, char const *argv[])
     }
   }
 
+  // 정렬된 배열 출력
   for (i = 0; i < 10; i++)
   {
     printf("%d ", array[i]);
