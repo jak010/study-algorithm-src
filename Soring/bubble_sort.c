@@ -1,5 +1,11 @@
-// 옆에 있는 값과 비교해서 더 작은 값을 앞으로 보내면 어떨까?
+// 서로 인접한 두 원소를 검사하여 정렬하는 알고리즘
+// n 과 n+1 비교함
+// 선택 정렬과 유사하지만 헷갈리면 안됨
 
+
+// BEST : n^2
+// AVG  : n^2
+// Worst : n^2
 #include <stdio.h>
 
 int main(int argc, char const *argv[]) {
