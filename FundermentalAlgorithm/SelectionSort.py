@@ -1,4 +1,4 @@
-arr = [1, 2, 3, 4, 5]
+arr = [1, 3, 2, 5 ,4]
 
 for idx, value in enumerate(arr):
     # 최소값은 시작 인덱스로 초기화
