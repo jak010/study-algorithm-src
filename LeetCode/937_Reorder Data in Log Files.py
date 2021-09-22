@@ -38,8 +38,9 @@ class Solution:
                 digit_log.append(log)
             else:
                 letter_log.append(log)
-
-        letter_log.sort(key=lambda x: (x.split()[1:], x.split()[0]))
+        letter_log.sort(
+            key=lambda x: (x.split()[1:], x.split()[0])
+        )
 
         return letter_log + digit_log
 
