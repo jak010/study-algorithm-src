@@ -15,6 +15,19 @@ class Solution:
                 result += min(nums[k - 1:k + 1])
         return result
 
+    # Solve 01
+    # def arrayPairSum(self, nums: List[int]) -> int:
+    #     sum = 0
+    #     nums.sort()
+    #
+    #     for i, n in enumerate(nums):
+    #         if i % 2 == 0:
+    #             sum += n
+    #     return sum
+
+    # def arrayPairSum(self, nums: List[int]) -> int:
+    #     return sum(sorted(nums)[::2])
+
 
 if __name__ == '__main__':
     nums = [1, 4, 3, 2]
