@@ -25,7 +25,7 @@ class Solution:
                 else:
                     right -= 1
 
-        return (list(set(output)))
+        return list(set(output))
 
 
 if __name__ == '__main__':

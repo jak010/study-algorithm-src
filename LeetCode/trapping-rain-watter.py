@@ -3,10 +3,28 @@ from typing import List
 
 class Solution:
     def trap(self, height: List[int]) -> int:
-        height = [height[x:x + 3] for x in range(0, len(height), 3)]
 
-        from pprint import pprint
-        pprint(height)
+        volume = 0
+
+        left = 0
+        right = len(height) - 1
+
+        left_max = height[left]
+        right_max = height[right]
+
+        while left_max <= right_max:
+
+            left_max = min(left_max, height[left])
+            right_max = min(right_max, height[right])
+
+            if left <= right_max:
+                volume += left_max - height[left]
+                left += 1
+            else:
+                volume += right_max - height[right]
+                right -= 1
+
+        return volume
 
 
 if __name__ == '__main__':
