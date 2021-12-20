@@ -14,6 +14,7 @@ class Solution:
 
         p = 1
         for i in range(len(nums) - 1, -1, -1):
+            print(out[i], p)
             out[i] = out[i] * p
             p = p * nums[i]
 
