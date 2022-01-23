@@ -13,7 +13,6 @@ for _ in range(total):
 
     print("{:.3f}%".format(float(len(rate) / len(grade) * 100)))
 
-
 # 백준 4344 번 객체 형식으로 바꿔보기
 from __future__ import annotations
 from typing import Type, List, Optional
@@ -46,29 +45,29 @@ class Operation:
         self.grade_group: List[Grade] = grade_group
 
     @property
-    def grade_group_size(self):
+    def get_grade_group_size(self):
         return len(self.grade_group)
 
     @property
-    def sum_grade(self):
+    def get_sum_grade(self):
         return sum([grade.value for grade in self.grade_group])
 
     @property
-    def average(self):
-        return self.sum_grade / self.grade_group_size
+    def get_average(self):
+        return self.get_sum_grade / self.get_grade_group_size
 
     @property
-    def upper_rate_group(self):
+    def get_upper_rate_group(self):
         return [grade.value for grade in self.grade_group
-                if grade.value > self.average]
+                if grade.value > self.get_average]
 
     @property
-    def upper_rate_group_length(self):
-        return len(self.upper_rate_group)
+    def get_upper_rate_group_length(self):
+        return len(self.get_upper_rate_group)
 
     @property
-    def upper_rate(self):
-        return "{:.3f}%".format(float(self.upper_rate_group_length) / self.grade_group_size * 100)
+    def get_upper_rate(self):
+        return "{:.3f}%".format(float(self.get_upper_rate_group_length) / self.get_grade_group_size * 100)
 
 
 class Processor:
