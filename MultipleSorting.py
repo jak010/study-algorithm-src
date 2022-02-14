@@ -10,7 +10,7 @@ b = 'zbdaf'
 print(''.join(sorted(b)))
 
 # list의 sort메소드
-# 제자리 정렬(in-place Sort)임 입력을 출력으로 덮어씌움
+# 제자리 정렬(in-place Sorting)임 입력을 출력으로 덮어씌움
 
 # list의 sort 메소드는 반환값이 없으므로 주의가 필요
 a_sort = a.sort()

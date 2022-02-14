@@ -1,4 +1,4 @@
-""" Insertion Sort
+""" Insertion Sorting
 
 Author:
     jaka010
@@ -13,7 +13,7 @@ Desc:
 arr = [2, 5, 3, 1, 4]
 # 2 5 3 1 4
 
-# Insertion Sort Code Example
+# Insertion Sorting Code Example
 # for end in range(1, len(arr)):
 #     for i in range(end, 0, -1):
 #         if arr[i - 1] > arr[i]:
