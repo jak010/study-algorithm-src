@@ -1,5 +1,4 @@
 from typing import List
-from itertools import permutations
 
 
 class Solution:
@@ -25,8 +24,19 @@ class Solution:
     #     return sum
 
     # Solve 02
-    # def arrayPairSum(self, nums: List[int]) -> int:
-    #     return sum(sorted(nums)[::2])
+    def solve02(self, nums: List[int]) -> int:
+        return sum(sorted(nums)[::2])
+
+    # Solve 03
+    # def solve03(self, nums: List[int]) -> int:
+    #     result = 0
+    #     depth = 2
+    #     nums.sort()
+    #
+    #     for i in range(0, len(nums), depth):
+    #         result += min(nums[i:i + depth])
+    #
+    #     return result
 
 
 if __name__ == '__main__':
@@ -41,3 +51,4 @@ if __name__ == '__main__':
 
     obj = Solution()
     print(obj.arrayPairSum(nums))
+    print(obj.solve02(nums))
