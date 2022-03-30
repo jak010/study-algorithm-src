@@ -19,6 +19,18 @@ class Solution:
         else:
             return len(nums)
 
+    # Update: 2022.03.30
+    def solve2(self, nums, val):
+
+        for idx in range(len(nums)):
+
+            if nums[idx] == val:
+                nums.append(nums[idx])
+                nums.remove(nums[idx])
+
+        print(nums)
+        return len(nums) - nums.count(val)
+
 
 if __name__ == '__main__':
     # nums = []
