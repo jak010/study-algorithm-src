@@ -27,8 +27,26 @@ def solution(babbling):
     return result
 
 
+def solution2(babbling):
+    enables = ["aya", "ye", "woo", "ma"]
+
+    counter = 0
+    for babble in babbling:
+
+        for enable in enables:
+            babble = babble.replace(enable, " ").strip()
+            if len(babble) == 0:
+                counter += 1
+                break
+
+    return counter
+
+
 if __name__ == '__main__':
     test_01 = ["aya", "yee", "u", "maa", "wyeoo"]
     test_02 = ["ayaye", "uuuma", "ye", "yemawoo", "ayaa"]
 
-    print(solution(test_02))
+    # print(solution(test_02))
+
+    print(solution2(test_02))
+    # print(solution2(test_01))
