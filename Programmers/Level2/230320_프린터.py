@@ -107,7 +107,7 @@ def solution2(priorities, location):
         if dq and vp.val < max([v.val for v in dq]):
             dq.append(vp)
 
-        if vp.val >= max([v.val for v in dq]):
+        if dq and vp.val >= max([v.val for v in dq]):
             dq.appendleft(vp)
             break
 
@@ -119,7 +119,7 @@ def solution2(priorities, location):
 priorities = [2, 1, 3, 2]  # -> 3,2,2,1
 location = 2
 
-# priorities = [1, 1, 9, 1, 1, 1]
-# location = 0
+priorities = [1, 1, 9, 1, 1, 1]
+location = 0
 
 print(solution2(priorities, location))
