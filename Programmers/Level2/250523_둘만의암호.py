@@ -21,6 +21,33 @@ def solution(s, skip, index):
     return answer
 
 
+def solution2(s, skip, index):
+    """ Solution
+
+    Flow
+    - alphabet을 미리 선언한다.
+    - alphabet 중 skip에 있는 문자열을 제외하여 문자열 리스트를 만든다.
+    - 미리 만들어진 문자열 리스트에서 index 만큼 순회한다.
+        - 미리 만들어진 문자열 리스트에서 index 만큼의 범위를 구한다.
+
+    """
+
+    prepared_alphabet = ""
+    for alpha in alphabet:
+        if alpha in skip:
+            continue
+        prepared_alphabet += alpha
+
+    answer = ""
+
+    for ch in s:
+        idx = prepared_alphabet.index(ch)
+        rotate = (idx + index) % len(prepared_alphabet)  # 배열 회전공식
+        answer += prepared_alphabet[rotate]
+
+    return answer
+
+
 if __name__ == '__main__':
     s = "aukks"
     skip = "wbqd"
